@@ -2,4 +2,5 @@
 *.csv
 # ignore all files in any directory named build
 .ipynb_checkpoints/
+.DS_Store
 testingzone/
