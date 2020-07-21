@@ -149,12 +149,14 @@ plot(saplot)
 plotlyjs()
 # We will provide attrributes to our plotting here.
 # Read more about these atrributes
-defaultplot = plot(deceaseddays, label="time-line",
+defaultplot = plot(deceaseddays, legend=:bottomleft, label="time-line",
      saplot,
      xticks=deceaseddays[1:14:end],
      xrotation=45,
      leg=:topleft,
-     grid=false)
+     grid=false,
+     #size=(1200,800)
+     )
 
 
     scatter!(deceaseddays,
@@ -162,7 +164,10 @@ defaultplot = plot(deceaseddays, label="time-line",
             linewidths=1,
             label="death",
             marker=:o,
-            markercolor="brown")
+            markersize=3,
+            markeralpha = 7.0,
+            markercolor="brown",
+            hover=saplot)
 theme(:juno)
 xlabel!("Confirmed death every 14 days")
 ylabel!("Total deaths")
