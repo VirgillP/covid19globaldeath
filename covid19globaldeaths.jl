@@ -172,4 +172,3 @@ theme(:juno)
 xlabel!("Confirmed death every 14 days")
 ylabel!("Total deaths")
 title!("COVID-19 death")
-
